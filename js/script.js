@@ -34,14 +34,19 @@ const dataTeam = [
 console.log(dataTeam);
 
 
-const containerString = document.querySelector('.container')
+const containerString = document.querySelector('.row')
 
 for (let i = 0; i < dataTeam.length; i++) {
     const currentTeam = dataTeam[i];
     containerString.innerHTML += `
-                    <p>
-                    nome e cognome:${currentTeam.name} <br>
-                    ruolo:${currentTeam.ruolo} <br>
-                    foto-profilo:${currentTeam.img}<br>
-                    </p>`
+                        <div class="col-4 mb-4">
+                            <div class="card">
+                                <img src="img/${currentTeam.img}" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">${currentTeam.name}</h5>
+                                    <p class="card-text">${currentTeam.ruolo}</p>
+                                </div>
+                            </div>
+                        </div>
+`
 }
