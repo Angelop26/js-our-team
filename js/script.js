@@ -33,7 +33,15 @@ const dataTeam = [
 
 console.log(dataTeam);
 
+
+const containerString = document.querySelector('.container')
+
 for (let i = 0; i < dataTeam.length; i++) {
     const currentTeam = dataTeam[i];
-    console.log(currentTeam.name, currentTeam.ruolo, currentTeam.img);
+    containerString.innerHTML += `
+                    <p>
+                    nome e cognome:${currentTeam.name} <br>
+                    ruolo:${currentTeam.ruolo} <br>
+                    foto-profilo:${currentTeam.img}<br>
+                    </p>`
 }
